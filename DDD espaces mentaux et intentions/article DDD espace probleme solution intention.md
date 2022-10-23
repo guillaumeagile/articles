@@ -67,7 +67,7 @@ Ces 3 concepts étant éclaircis, j’ai voulu raconter une histoire, souvent v�
 ### Acte 1: personne ne se parle
 
 
-![alt_text](acte 1.png "image_tooltip")
+![alt_text](acte1.png)
 
 
 Bon nombre de projets commencent ainsi: les experts du domaine n’ont pas fini d’explorer l’espace du problème ou ne sont pas encore capable de l’expliciter avec des éléments suffisamment tangibles; ou encore: la vision du produit à livrer n’est vraiment pas mûre (je n’ai jamais dit que l’on ne pouvait pas vivre avec cette incertitude, au contraire).
@@ -78,7 +78,7 @@ L’équipe de dev décide de son côté d’imaginer un espace de la solution r
 ### Acte 2: les devs ont commencé à coder la solution sans questionner le métier
 
 
-![alt_text](images/image2.png "image_tooltip")
+![alt_text](acte2.png "image_tooltip")
 
 
 Mais l’équipe a progressé; ils ont aligné une partie du code avec l’espace de la solution.
@@ -90,7 +90,7 @@ Ils sont, je pense, sur une partie de la bonne voie, MAIS, ils n’ont toujours 
 ### Acte 3: enfin le métier et les devs se sont parlé, mais le code produit n'est toujours pas (assez) aligné avec le métier
 
 
-![alt_text](images/image3.png "image_tooltip")
+![alt_text](acte3.png "image_tooltip")
 
 
 C’est normal, Rome ne s’est pas faite en un jour.
@@ -109,7 +109,7 @@ Les espaces du problème, de la solution et le code qui part en production, se m
 ### Acte 4: on se comprend mieux; le modèle mental du problème et de la solution fusionnent et l'intention du code reflète cela.
 
 
-![alt_text](images/image4.png "image_tooltip")
+![alt_text](acte4.png "image_tooltip")
 
 
 Il y a encore du travail, mais les choses avancent.
@@ -119,7 +119,7 @@ L’équipe est en confiance, son code reflète bien mieux sa représentation me
 Et tout cela s’auto entretient [comme ceci](https://www.domainlanguage.com/ddd/whirlpool/):
 
 
-![alt_text](images/image5.png "image_tooltip")
+![alt_text](whirlpoool_ddd.png)
 
 
 
@@ -128,7 +128,7 @@ Et tout cela s’auto entretient [comme ceci](https://www.domainlanguage.com/ddd
 Le monde a ses limites, cela ne sera jamais parfait.
 
 
-![alt_text](images/image6.png "image_tooltip")
+![alt_text](acte5.png "image_tooltip")
 
 
 Je pense qu’une réalisation discrète d’un problème continu sera toujours imparfaite.
