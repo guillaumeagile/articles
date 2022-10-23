@@ -67,7 +67,7 @@ Ces 3 concepts étant éclaircis, j’ai voulu raconter une histoire, souvent v�
 ### Acte 1: personne ne se parle
 
 
-![alt_text](images/image1.png "image_tooltip")
+![alt_text](acte 1.png "image_tooltip")
 
 
 Bon nombre de projets commencent ainsi: les experts du domaine n’ont pas fini d’explorer l’espace du problème ou ne sont pas encore capable de l’expliciter avec des éléments suffisamment tangibles; ou encore: la vision du produit à livrer n’est vraiment pas mûre (je n’ai jamais dit que l’on ne pouvait pas vivre avec cette incertitude, au contraire).
