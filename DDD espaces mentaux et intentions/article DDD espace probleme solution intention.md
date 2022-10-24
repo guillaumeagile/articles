@@ -23,21 +23,26 @@ Anthony Cassaigne m’a interpellé sur la signification (profonde) de ce paragr
 
 Tout propos étant soumis à interprétation, je me suis fendu d’une petite succession de schémas qui me sont venus à l’esprit pour tenter d’éclaircir ma propre vision sur la chose.
 
-J’ai donc repris les concepts distincts de: modèle mental du problème, modèle mental de la solution et intention du programme.
+Nous pensons qu'il est possible de décrire le développement d'une solution logiciel avec ces quatres éléments explicatifs qui sont :
+- le problème réel
+- le modèle mental du problème
+- le modèle mental de la solution
+- et enfin l'intention du programme, traduisant l'intention du ou des développeurs
 
 Pour éclaircir la suite, je vais en donner ma propre interprétation.
 
 Parlons d’abord de l’intention du programme: pas facile à définir  et ma proposition sera critiquable. Jean Pascal Boignard me pose la question: est ce que l’intention du programme serait “_la somme des fonctions que réalise un programme qui visent à offrir une solution à tout ou partie d'un problème avec plus ou moins de qualité_“ ?
 
-Cette définition me plait bien, et je rajouterai que cette intention est aussi (et surtout) la somme des tests qui couvrent le code, car avec le TDD, qu’ils soient unitaires ou d’intégration ou d’acceptance, les tests révèlent par l’explicitation du comportement attendu et observable, l’intention du programme.
+C'est un bon début pour une définition, à laquelle il convient d'ajouter l'ensemble des tests et plus particulièrement les tests unitaires documentant les comportements observable c'est à dire la plus grande partie des règles métier lorsque ceux-ci s'avèrent exhaustifs. Ce qui est généralement le cas lorsque l'approche test first a été appliqué. A cet ensemble de tests nous pouvons bien évidement lui ajouter les tests d'acceptance, d'intégration et end-to-end. Ces tests explicite le comportement attendu, le rend observable (dans l'idéal en racontant une histoire) et font partie de l'intention du programme.
+
 
 Parlons ensuite des modèles mentaux.
 
-L’intérêt de l'existence d’un [modèle mental ](https://www.scotthyoung.com/blog/2020/06/08/best-mental-models/)est de pouvoir le partager avec les autres, et donc de l’écrire (d’où émergence de la problématique du langage) et/ou de le schématiser, le formaliser.
+L’intérêt de l'existence d’un [modèle mental ](https://www.scotthyoung.com/blog/2020/06/08/best-mental-models/) est de pouvoir le partager avec les autres, et donc de l’écrire (d’où émergence de la problématique du langage) et/ou de le schématiser, le formaliser.
 
-Le modèle mental du problème est la façon dont on va se représenter l’espace du problème. La séparation des espaces de problème et de solution se retrouve dans les approches du  [Design Thinking](https://medium.com/@raffaele.bagalini/la-premi%C3%A8re-%C3%A9tape-du-design-thinking-1df387bf3cd4) par exemple, et dans le DDD bien sûr.
+Le modèle mental du problème est la façon dont on va se représenter l’espace du problème. C'est la première étape à réaliser afin d'aligner l'ensemble des acteurs : Product Owner, les parties prenants, les développeurs... Il s'agit de décrire correctement l'espace du problème, penser au problème avant de penser aux solutions possibles.
 
-Le modèle mental de la solution est la même chose mais destiné à ceux qui veulent solutionner le problème (ou besoin) initial. DDD a toutes les cartes en mains pour nous aider à établir un modèle mental de la solution avec sa [panoplie stratégique et tactique](https://vaadin.com/blog/ddd-part-1-strategic-domain-driven-design).
+Les approches [Design Thinking](https://medium.com/@raffaele.bagalini/la-premi%C3%A8re-%C3%A9tape-du-design-thinking-1df387bf3cd4) et dans le Domain Driven Design (DDD) insiste clairement sur ce point.
 
 Je cite l’article de Vaadin:
 
@@ -49,9 +54,15 @@ The solution space concentrates on how the problems in the problem space are goi
 
 ```
 
-Les usagers et experts du Domaine parlent le langage du Domaine, un langage naturel (humain) riche en ambiguïtés et jargonnage, reflétant les us et coutumes de tel métier.
+Le modèle mental de la solution (ou besoin) est la formalisation d'une solution pour ceux qui souhaitent tenter d'apporter une première réponse au problème initial. 
+DDD apporte de nombreux outils pour nous aider à établir un modèle mental de la solution tant au niveau [stratégique que tactique](https://vaadin.com/blog/ddd-part-1-strategic-domain-driven-design).
 
-Les artisans de la solution (logicielle) se doivent d’établir avec les acteurs du domaine, une co-construction de ce langage du domaine qui sera appelé _Ubiquitous Language_ par Eric Evans, car il devra être compris par toutes les parties prenantes, et devra chasser tous les implicites.
+
+Les usagers et experts du Domaine parlent le langage du Domaine, un langage naturel (humain) riche et imparfait à la fois ambiguïtés, polysémique constitué d'un jargon reflétant les us et coutumes du métier.
+
+~Anthony~ 
+
+Les artisans ou développeur de la solution (logicielle) se doivent d’établir avec les acteurs du domaine, une co-construction de ce langage du domaine qui sera appelé _Ubiquitous Language_ par Eric Evans, car il devra être compris par toutes les parties prenantes, et devra chasser tous les implicites.
 
 ```
 Domain experts should object to terms or structures that are awkward or inadequate to convey domain understanding; developers should watch for ambiguity or inconsistency that will trip up design.
