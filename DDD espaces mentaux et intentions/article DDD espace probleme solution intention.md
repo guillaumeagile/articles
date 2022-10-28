@@ -6,18 +6,16 @@ Il pointe du doigt les causes racines du code mal écrit.
 
 Il tente de résumer sa pensée comme ceci:
 
-```
-In order to solve any real world problem we first need to form a mental model of that problem.
 
+>In order to solve any real world problem we first need to form a mental model of that problem.
 Think of this as the intent of your program.
 
-Next you need to form a model of a solution that will achieve your programs intent.
-
-Let's call this the semantic model. Never confuse the intent of your program with your solution to that intent.
-
+>Next you need to form a model of a solution that will achieve your programs intent.
+>Let's call this the semantic model. 
+>Never confuse the intent of your program with your solution to that intent.
 We tend to think primarily in terms of solutions, and often bypass the formation of a model of intent.
 
-```
+
 
 Anthony Cassaigne m’a interpellé sur la signification (profonde) de ce paragraphe, qui reste c’est vrai assez mystérieux pour nous.
 
@@ -41,30 +39,26 @@ Le modèle mental de la solution est la même chose mais destiné à ceux qui ve
 
 Je cite l’article de Vaadin:
 
-```
 
-Vaughn Vernon splits a domain up into a problem space and a solution space. The problem space concentrates on what business problems we are trying to solve. (...)
 
-The solution space concentrates on how the problems in the problem space are going to be solved. It is more concrete, more technical and contains more details.
+>Vaughn Vernon splits a domain up into a problem space and a solution space. The problem space concentrates on what business problems we are trying to solve. (...)
+>The solution space concentrates on how the problems in the problem space are going to be solved. It is more concrete, more technical and contains more details.
 
-```
+
 
 Les usagers et experts du Domaine parlent le langage du Domaine, un langage naturel (humain) riche en ambiguïtés et jargonnage, reflétant les us et coutumes de tel métier.
 
 Les artisans de la solution (logicielle) se doivent d’établir avec les acteurs du domaine, une co-construction de ce langage du domaine qui sera appelé _Ubiquitous Language_ par Eric Evans, car il devra être compris par toutes les parties prenantes, et devra chasser tous les implicites.
 
-```
-Domain experts should object to terms or structures that are awkward or inadequate to convey domain understanding; developers should watch for ambiguity or inconsistency that will trip up design.
-
+>Domain experts should object to terms or structures that are awkward or inadequate to convey domain understanding; developers should watch for ambiguity or inconsistency that will trip up design.
 -- Eric Evans
-```
 
-[Martin Fowler cite Evans](https://martinfowler.com/bliki/UbiquitousLanguage.html) pour expliquer ce que l’on attend du langage omniprésent.
+[Martin Fowler cite Evans](https://martinfowler.com/bliki/UbiquitousLanguage.html) pour expliquer ce que l’on attend de l' "Ubiquitous Language".
 
 Ces 3 concepts étant éclaircis, j’ai voulu raconter une histoire, souvent vécue, de ce qui se joue dans les équipes, entre modèle de l’espace du problème, modèle de l’espace de la solution et code mis en production.
 
 
-### Acte 1: personne ne se parle
+## Acte 1: personne ne se parle
 
 
 ![alt_text](acte1.png)
@@ -75,19 +69,24 @@ Bon nombre de projets commencent ainsi: les experts du domaine n’ont pas fini 
 L’équipe de dev décide de son côté d’imaginer un espace de la solution rêvée, et même elle produit du code pour se faire plaisir (ou se former) côté techno et infrastructures (exemple typique: “_et si on commençait par installer une base de données_”). Après tout, on nous paye pour coder, alors il faut bien justifier son salaire...
 
 
-### Acte 2: les devs ont commencé à coder la solution sans questionner le métier
+## Acte 2: les devs ont commencé à coder la solution sans questionner le métier
 
 
 ![alt_text](acte2.png "image_tooltip")
 
+Ceci est une situation fictive: c'est en effet assez dangereux de procéder ainsi.
+Comme le dit Yoan Thirion, une fois qu'on a un modèle mental de la solution, celui-ci va nous biaiser et on aura du mal à s'en défaire.
 
-Mais l’équipe a progressé; ils ont aligné une partie du code avec l’espace de la solution.
+*« J'imagine qu'il est tentant, si le seul outil dont vous disposiez est un marteau, de tout considérer comme un clou. ». - Abraham Maslow (biais de jugement)*
 
-C’est un grand pas en avant, et pour cela ils ont utilisé les principes [tactiques](https://vaadin.com/blog/ddd-part-2-tactical-domain-driven-design) que nous dévoile le DDD: penser en agrégats, entités, objets valeurs, immutabilité, event driven, [architecture hexagonale](https://vaadin.com/blog/ddd-part-3-domain-driven-design-and-the-hexagonal-architecture), noyau fonctionnel (functionnal core) et enveloppe impérative (imperative shell): [un concept vieux de 10 ans maintenant](https://github.com/kbilsted/Functional-core-imperative-shell/blob/master/README.md). \
+Imaginons que l’équipe arrive malgré tout à progresser.
+Ils réussissent à aligner une partie du code avec l’espace de la solution.
+
+C’est un grand pas en avant, et pour cela ils auront sûrement utilisé les principes [tactiques](https://vaadin.com/blog/ddd-part-2-tactical-domain-driven-design) que nous dévoile le DDD: penser en agrégats, entités, objets valeurs, immutabilité, event driven, [architecture hexagonale](https://vaadin.com/blog/ddd-part-3-domain-driven-design-and-the-hexagonal-architecture), noyau fonctionnel (functionnal core) et enveloppe impérative (imperative shell): [un concept vieux de 10 ans maintenant](https://github.com/kbilsted/Functional-core-imperative-shell/blob/master/README.md). \
 Ils sont, je pense, sur une partie de la bonne voie, MAIS, ils n’ont toujours pas parlé aux experts métier. Ou pas suffisamment. Leurs 2 mondes restent dangereusement disjoints.
 
 
-### Acte 3: enfin le métier et les devs se sont parlé, mais le code produit n'est toujours pas (assez) aligné avec le métier
+## Acte 3: enfin le métier et les devs se sont parlés, mais le code produit n'est toujours pas (assez) aligné avec le métier
 
 
 ![alt_text](acte3.png "image_tooltip")
@@ -106,7 +105,7 @@ Heureusement, ils ont fait du TDD et leur batterie de tests leur permet d’effe
 Les espaces du problème, de la solution et le code qui part en production, se mettent à converger!
 
 
-### Acte 4: on se comprend mieux; le modèle mental du problème et de la solution fusionnent et l'intention du code reflète cela.
+## Acte 4: on se comprend mieux; le modèle mental du problème et de la solution fusionnent et l'intention du code reflète cela.
 
 
 ![alt_text](acte4.png "image_tooltip")
@@ -116,16 +115,13 @@ Il y a encore du travail, mais les choses avancent.
 
 L’équipe est en confiance, son code reflète bien mieux sa représentation mentale de la solution, qui elle même s’aligne avec l’expertise du métier.
 
-Et tout cela s’auto entretient [comme ceci](https://www.domainlanguage.com/ddd/whirlpool/):
-
-
-![alt_text](whirlpoool_ddd.png)
+Et tout cela progresse dans un tourbillon créatif, comme cela est expliqué sur le site [DomaineLanguage.com](https://www.domainlanguage.com/ddd/whirlpool/).
 
 
 
-### Acte 5: un final?
+## Acte 5: un final?
 
-Le monde a ses limites, cela ne sera jamais parfait.
+Le monde a ses limites, rien ne sera jamais parfait.
 
 
 ![alt_text](acte5.png "image_tooltip")
@@ -135,12 +131,14 @@ Je pense qu’une réalisation discrète d’un problème continu sera toujours 
 
 Il faut savoir vivre avec celà et malgré tout, prendre plaisir à faire partie de la solution :)
 
-```
 
-PS: je vous parlerai des méta-modèles dans un tout prochain article. stay tuned.
+>PS: je vous parlerai des méta-modèles dans un tout prochain article. stay tuned.
 
-```
+
 
 Et je laisse la conclusion à Jean Pascal Boignard:
 
 _En somme, ce modèle d'ensemble aide à questionner l'efficience des activités de développement logiciel via la convergence de ses représentations; à révéler ses gaspillages, et peut inviter à une réflexion éthique plus large par la clarification des intentions et intérêts des parties prenantes._
+
+
+__Avec l’aimable relecture et participation de Yoan Thirion.__
