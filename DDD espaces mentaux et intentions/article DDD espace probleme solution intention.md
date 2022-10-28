@@ -141,4 +141,4 @@ Et je laisse la conclusion à __Jean Pascal Boignard__:
 _En somme, ce modèle d'ensemble aide à questionner l'efficience des activités de développement logiciel via la convergence de ses représentations; à révéler ses gaspillages, et peut inviter à une réflexion éthique plus large par la clarification des intentions et intérêts des parties prenantes._
 
 
-__Avec l’aimable relecture et participation de Yoan Thirion.__
+__Avec l’aimable relecture et participation de Yoan Thirion et Anthony Cassaigne.__
