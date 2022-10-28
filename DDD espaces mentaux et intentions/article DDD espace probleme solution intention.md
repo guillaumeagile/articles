@@ -136,7 +136,7 @@ Il faut savoir vivre avec celà et malgré tout, prendre plaisir à faire partie
 
 
 
-Et je laisse la conclusion à Jean Pascal Boignard:
+Et je laisse la conclusion à __Jean Pascal Boignard__:
 
 _En somme, ce modèle d'ensemble aide à questionner l'efficience des activités de développement logiciel via la convergence de ses représentations; à révéler ses gaspillages, et peut inviter à une réflexion éthique plus large par la clarification des intentions et intérêts des parties prenantes._
 
